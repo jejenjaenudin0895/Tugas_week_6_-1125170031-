@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_week_6/screen/splash_screen_1.dart';
 
 void main (){
   runApp(MyApp());
