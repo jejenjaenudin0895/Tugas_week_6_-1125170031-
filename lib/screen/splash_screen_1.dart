@@ -14,13 +14,17 @@ class MySplashScreen1 extends StatelessWidget {
                Container(
                  height: 240,
                  width: 240,
-                 decoration: const BoxDecoration(color: Colors.green,
+                 decoration: const BoxDecoration(
+                  color: Colors.green,
                  shape: BoxShape.circle,
+                 image: DecorationImage(image: AssetImage("assets/images/test1.jpeg"),
+                 fit: BoxFit.cover,
+                 ),
                  ),
                ),
              ],
             ),
-         ),
+         ),  
          );
 
        
