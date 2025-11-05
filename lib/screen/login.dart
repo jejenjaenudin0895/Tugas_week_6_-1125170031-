@@ -148,10 +148,7 @@ class Login extends StatelessWidget {
                 children: [
                   OutlinedButton.icon(
                     onPressed: () {},
-                    icon: Image.asset(
-                      'assets/images/test5.jpeg',
-                     height: 24,
-                    ),
+                    icon: Image.asset('assets/images/test5.jpeg', height: 24),
                     label: Text('Login dengan Google'),
                     style: OutlinedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(
