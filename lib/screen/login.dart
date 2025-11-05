@@ -6,144 +6,186 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              height: 240,
-              width: 240,
-              decoration: const BoxDecoration(
-                color: Colors.green,
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: AssetImage("assets/images/test4.jpeg"),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            SizedBox(height: 20),
-            Text(
-              "welcome",
-              style: TextStyle(
-                fontSize: 30.0,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 2),
-            Text(
-              "Silahkan login untuk melanjutkan",
-              style: TextStyle(fontSize: 16.0, color: Colors.green),
-            ),
-            SizedBox(height: 20),
-            Container(
-              margin: EdgeInsets.only(left: 20, right: 20),
-              child: TextField(
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
-                  labelText: "Email",
-                  hintText: "Masukan Email anda",
-                  prefixIcon: Icon(Icons.email_outlined),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.green, width: 2),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.orange, width: 2),
+        child: SingleChildScrollView(
+          controller: ScrollController(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 200,
+                width: 200,
+                decoration: const BoxDecoration(
+                  color: Colors.green,
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/test4.jpeg"),
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
-            ),
-            SizedBox(height: 20),
-            Container(
-              margin: EdgeInsets.only(left: 20, right: 20),
-              child: TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: "Password",
-                  hintText: "Masukan Password anda",
-                  prefixIcon: Icon(Icons.lock_outline_rounded),
-                  suffixIcon: Icon(Icons.visibility_off_rounded),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.green, width: 2),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.orange, width: 2),
-                  ),
+              SizedBox(height: 20),
+              Text(
+                "welcome",
+                style: TextStyle(
+                  fontSize: 30.0,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-            ),
-            SizedBox(height: 5),
-            Padding(
-              padding: const EdgeInsets.only(
-                right: 10.0,
-              ), // jarak 20 pixel dari kanan
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Lupa password",
-                    style: TextStyle(
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blue,
+              SizedBox(height: 2),
+              Text(
+                "Silahkan login untuk melanjutkan",
+                style: TextStyle(fontSize: 16.0, color: Colors.green),
+              ),
+              SizedBox(height: 20),
+              Container(
+                margin: EdgeInsets.only(left: 20, right: 20),
+                child: TextField(
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    labelText: "Email",
+                    hintText: "Masukan Email anda",
+                    prefixIcon: Icon(Icons.email_outlined),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.green, width: 2),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.orange, width: 2),
                     ),
                   ),
                 ),
               ),
-            ),
-            SizedBox(height: 20),
-            Container(
-              margin: EdgeInsets.only(left: 40, right: 40),
-              child: SizedBox(
-                width: double.infinity,
-                height: 40,
-                child: ElevatedButton(
-                  onPressed: () {
-                   
-                  },
+              SizedBox(height: 20),
+              Container(
+                margin: EdgeInsets.only(left: 20, right: 20),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: "Password",
+                    hintText: "Masukan Password anda",
+                    prefixIcon: Icon(Icons.lock_outline_rounded),
+                    suffixIcon: Icon(Icons.visibility_off_rounded),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.green, width: 2),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.orange, width: 2),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 5),
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: 10.0,
+                ), // jarak 20 pixel dari kanan
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Lupa password",
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                margin: EdgeInsets.only(left: 40, right: 40),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: 40,
+                  child: ElevatedButton(
+                    onPressed: () {},
 
-                  //ElevatedButton digunakan untuk membuat lingkaran pada text
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                  ),
-                  child: Text(
-                    "login",
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
+                    //ElevatedButton digunakan untuk membuat lingkaran pada text
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                    ),
+                    child: Text(
+                      "login",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-            SizedBox(height: 10),
-            Container(
-              margin:EdgeInsets.only(left:20, right: 20),
-              child: Row( 
+              SizedBox(height: 10),
+              Container(
+                margin: EdgeInsets.only(left: 20, right: 20),
+                child: Row(
+                  children: [
+                    Expanded(child: Divider(color: Colors.green)),
+                    SizedBox(height: 5),
+                    Text("atau", style: TextStyle(fontSize: 12.0)),
+                    SizedBox(height: 5),
+                    Expanded(child: Divider(color: Colors.green)),
+                  ],
+                ),
+              ),
+
+              Column(
                 children: [
-                  Expanded(child: Divider(color: Colors.green)),
-                  SizedBox(height: 5),
-                  Text("atau",style: TextStyle(fontSize: 12.0,),),
-                  SizedBox(height: 5),
-                  Expanded(child: Divider(color: Colors.green)),
+                  OutlinedButton.icon(
+                    onPressed: () {},
+                    icon: Image.asset(
+                      'assets/images/test5.jpeg',
+                     height: 24,
+                    ),
+                    label: Text('Login dengan Google'),
+                    style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 12,
+                        horizontal: 20,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      side: BorderSide(color: Colors.grey[300]!),
+                      backgroundColor: Colors.white,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  OutlinedButton.icon(
+                    onPressed: () {},
+                    icon: Icon(Icons.facebook, color: Colors.blue),
+                    label: Text('Login dengan Facebook'),
+                    style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 12,
+                        horizontal: 20,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      side: BorderSide(color: Colors.grey[300]!),
+                      backgroundColor: Colors.white,
+                    ),
+                  ),
                 ],
               ),
-            ),
-             
-          ],
+            ],
+          ),
         ),
       ),
     );
